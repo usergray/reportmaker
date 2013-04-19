@@ -51,7 +51,7 @@ public class ReportSheet {
 		/**
 		 * Filling data
 		 */
-		for (int i = 1; reportResultSet.next() && i < 1000000; i++) {
+		for (int i = 1; reportResultSet.next() && i <= DEFAULT_MAX_ROW_COUNT; i++) {
 			row = reportSheet.createRow(i);
 			for (int j = 0; j < reportResultSet.getMetaData().getColumnCount(); j++) {
 				cell = row.createCell(j);
